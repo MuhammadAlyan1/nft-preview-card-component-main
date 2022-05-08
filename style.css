@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+/* 
+===============
+body 
+=============== 
+*/
+body {
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  background-color: var(--very-dark-blue-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* 
+===============
+container 
+=============== 
+*/
+
+.container {
+  margin: 1.5rem;
+  height: fit-content;
+  background-color: var(--very-dark-blue-card);
+  max-width: 340px;
+  border-radius: 10px;
+  padding: 1.8rem;
+}
+
+/* 
+===============
+image-div 
+=============== 
+*/
+
+.image-div {
+  cursor: pointer;
+  position: relative;
+  border-radius: 11px;
+  background-color: var(--cyan);
+}
+
+.image-div img {
+  display: block;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.image-div img:hover {
+  opacity: 0.5;
+}
+
+.image-div::after {
+  width: fit-content;
+  height: fit-content;
+  content: url("./images/icon-view.svg");
+  position: absolute;
+  inset: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.image-div:hover::after {
+  opacity: 1;
+}
+
+/* 
+===============
+content-div 
+=============== 
+*/
+
+.content-div h1 {
+  color: var(--white);
+  font-size: 1.6rem;
+}
+
+.content-div h1:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+.content-div p {
+  color: var(--soft-blue);
+  line-height: 1.6;
+}
+
+/* 
+===============
+eth-day 
+=============== 
+*/
+
+.eth-day {
+  border-bottom: 1px solid var(--very-dark-blue-line);
+  padding-bottom: 1rem;
+}
+
+.eth-day ul {
+  padding-left: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.eth-day ul li:nth-child(1) {
+  color: var(--cyan);
+}
+
+.eth-day ul li:nth-child(1) img {
+  margin-right: 0.5rem;
+  margin-bottom: -3px;
+}
+
+.eth-day ul li:nth-child(2) {
+  color: var(--soft-blue);
+}
+
+.eth-day ul li:nth-child(2) img {
+  margin-right: 0.5rem;
+  margin-bottom: -3px;
+}
+
+/* 
+===============
+user
+=============== 
+*/
+
+.user ul {
+  display: flex;
+}
+
+.user ul {
+  padding-left: 0px;
+}
+
+.user img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+
+.user li:nth-child(2) {
+  margin-bottom: 0px;
+  padding-left: 1rem;
+  width: fit-content;
+  height: fit-content;
+  color: var(--soft-blue);
+  align-self: center;
+}
+
+.user li:nth-child(2) span {
+  color: var(--white);
+}
+
+.user li:nth-child(2) span:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
